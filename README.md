@@ -6,15 +6,15 @@
 
 ###### 配置 wfs-rsclient 依赖
 
-[dependencies]
-wfs="0.0.1"
+    [dependencies]
+    wfs="0.0.1"
 
 ------------
 
 
 ###### 引入wfs-rsclient库
 
-use wfs::{client::WfsClient, stub::WfsFile};
+    use wfs::{client::WfsClient, stub::WfsFile};
 
 ------------
 
