@@ -37,8 +37,8 @@ pub fn read_file_to_wfsfile<P: AsRef<Path>>(
 
 #[test]
 fn test_append() {
-    let mut wc = WfsClient::new(false, "192.168.2.11", 6802, "dongdong", "123").unwrap();
-    match read_file_to_wfsfile("Cargo.toml", "123.toml".to_string()) {
+    let mut wc = WfsClient::new(true, "192.168.2.11", 6802, "admin", "123").unwrap();
+    match read_file_to_wfsfile("Cargo.toml", "12345.toml".to_string()) {
         Ok(wfs_file) => {
             println!("文件名: {}", wfs_file.name);
             println!("数据长度: {}", wfs_file.data.len());
@@ -64,8 +64,8 @@ fn test_append() {
 
 #[test]
 fn test_get() {
-    let mut wc = WfsClient::new(false, "192.168.2.11", 6802, "dongdong", "123").unwrap();
-    let opdata = wc.get("README.md");
+    let mut wc = WfsClient::new(true, "192.168.2.11", 6802, "admin", "123").unwrap();
+    let opdata = wc.get("readme2.md");
     match opdata {
         Some(value) => {
             let data = value.data.unwrap();
@@ -77,7 +77,7 @@ fn test_get() {
 
 #[test]
 fn test_delete() {
-    let mut wc = WfsClient::new(false, "192.168.2.11", 6802, "dongdong", "123").unwrap();
+    let mut wc = WfsClient::new(false, "192.168.2.11", 6802, "admin", "123").unwrap();
     let wa = wc.delete("123.toml");
     println!("delete ack status: {}", wa.ok);
     if !wa.ok {
@@ -93,7 +93,7 @@ fn test_delete() {
 
 #[test]
 fn test_rename() {
-    let mut wc = WfsClient::new(false, "192.168.2.11", 6802, "dongdong", "123").unwrap();
+    let mut wc = WfsClient::new(false, "192.168.2.11", 6802, "admin", "123").unwrap();
     let wa = wc.rename("README.md", "readme1.md");
     println!("rename ack status:{}", wa.ok);
     if !wa.ok {
