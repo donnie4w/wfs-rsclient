@@ -1,8 +1,16 @@
 [package]
 name = "wfs"
-version = "0.0.1"
+version = "0.0.2"
 edition = "2021"
 authors = ["donnie4w <donnie4w@gmail.com>"]
+description = "Rust client for WFS"
+homepage = "https://github.com/donnie4w/wfs-rsclient"
+documentation = "https://docs.rs/wfs" 
+readme = "README.md"
+keywords = ["wfs", "hdfs", "dfs", "wfs-rsclient"]
+categories = ["network", "filesystem"] 
+license = "Apache-2.0"
+repository = "https://github.com/donnie4w/wfs-rsclient"
 
 include = [
     "src/**/*.rs",
@@ -11,14 +19,8 @@ include = [
     "LICENSE",
 ]
 
-description = "Rust client for WFS"
-homepage = "https://github.com/donnie4w/wfs-rsclient"
-documentation = "https://docs.rs/wfs-rsclient" 
-readme = "README.md"
-keywords = ["wfs", "filesystem", "hdfs", "dfs", "bigdata","wfs-rsclient"]
-categories = ["network", "filesystem"] 
-license = "Apache-2.0"
-repository = "https://github.com/donnie4w/wfs-rsclient"
+
 
 [dependencies]
 thrift = "0.17.0"
+native-tls = "0.2.11"
