@@ -1,13 +1,15 @@
 # wfs-rsclient
 
-###### Rust Client for WFS
+##### Rust Client for [WFS](https://github.com/donnie4w/wfs "WFS")
+
+###### [wfs](https://github.com/donnie4w/wfs "wfs") is File Storage System
 
 ------------
 
 ###### 配置 wfs-rsclient 依赖
 
     [dependencies]
-    wfs="0.0.1"
+    wfs="0.0.2"
 
 ------------
 
